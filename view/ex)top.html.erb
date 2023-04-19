@@ -1,0 +1,17 @@
+<%= @menus.each do |menu| %>
+        <tr>
+          <td><%= link_to menu_path(menu.id) do %>
+                <%= image_tag menu.get_image(100,100) %>
+              <% end %>
+          </td>
+
+          <td><%= menu.name %></td>
+
+          <td><%= menu.price %></td>
+        </tr>
+      <% end %>
+
+
+      <div class="menus_path_link">
+      <%= link_to "すべての商品を見る", menus_path %>
+    </div>
